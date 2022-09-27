@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.learned {
+    background-color: rgba($color: #31ed95, $alpha: 0.1);
+  }
+  &.hard {
+    background-color: rgba($color: #ffac6c, $alpha: 0.1);
+  }
+}

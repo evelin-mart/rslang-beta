@@ -1,0 +1,11 @@
+.base {
+  transition: all .2s ease;
+}
+
+.right {
+  box-shadow: 0 0 10px green, 0 0 10px green, 0 0 10px green !important;
+}
+
+.wrong {
+  box-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red !important;
+}

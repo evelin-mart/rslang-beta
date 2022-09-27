@@ -1,0 +1,122 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.listItem {
+  flex-basis: 32%;
+  @media (max-width: 1056px) {
+    flex-basis: 40%;
+  }
+  @media (max-width: 768px) {
+    flex-basis: 80%;
+  }
+}
+
+.pagination {
+  width: fit-content;
+  margin: 1rem auto;
+}
+
+.wrapper {
+  background-color: rgba($color: #31ed95, $alpha: 0.1);
+  border-radius: 20px;
+  margin: 10px auto 0;
+  width: fit-content;
+}
+
+.shimmer {
+  font-size: 1.5em;
+  padding: 0 40px;
+  text-align: center;
+  color: rgba(0, 255, 0, 0.4);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  background: -moz-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 -125px;
+  background-color: #222;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+@keyframes shimmer {
+  60% {
+    background-position: top left -200px;
+  }
+  100% {
+    background-position: top right -125px;
+  }
+}
+
+.game {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  right: 2%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
+  &.audio {
+    bottom: 20%;
+    background: center / 50px url('../../shared/images/audiocall.svg') no-repeat, rgba(#1976d2, 0.6);
+    @media (max-width: 768px) {
+      background-size: 40px;
+    }
+  }
+  &.sprint {
+    bottom: 33%;
+    background: center / 50px url('../../shared/images/sprint.svg') no-repeat, rgba(#1976d2, 0.6);
+    @media (max-width: 768px) {
+      background-size: 40px;
+    }
+  }
+  &:hover {
+    background-color: #1976d2;
+    transform: scale(1.1);
+  }
+}
+
+.ribbon {
+  width: 50px;
+  height: 50px;
+}
